@@ -1,0 +1,170 @@
+{
+ "type": "Feature",
+ "id": "24E124136E140283",
+ "geometry": {
+  "type": "Point",
+  "coordinates": [
+   25.08559466020529,
+   60.31902912814716
+  ]
+ },
+ "properties": {
+  "fid": 4,
+  "field_1": "Potential sensor spot",
+  "field_2": 60.31896,
+  "field_3": 25.08571,
+  "field_4": "In middle of vegetation / green areas Saham\u00e4enkaari.",
+  "Date_installed": "2024-06-26",
+  "Sensor_number": 283,
+  "name": "",
+  "location": "",
+  "district": "",
+  "street": "",
+  "Estimated height from the ground level (m)": null,
+  "Pole surroundings": "",
+  "WUDAPT Local Climate Zone Classification": "",
+  "measurement": {
+   "time": "2024-11-06T20:57:56.087000+02:00",
+   "humidity": 92.5,
+   "temperature": 7.0
+  },
+  "data": {
+   "raw": [
+    {
+     "time": "2024-11-06T17:47:56.172000+00:00",
+     "humidity": 93.0,
+     "temperature": 7.0
+    },
+    {
+     "time": "2024-11-06T17:57:56.109000+00:00",
+     "humidity": 93.0,
+     "temperature": 6.9
+    },
+    {
+     "time": "2024-11-06T18:07:56.115000+00:00",
+     "humidity": 93.0,
+     "temperature": 6.9
+    },
+    {
+     "time": "2024-11-06T18:17:56.707000+00:00",
+     "humidity": 93.0,
+     "temperature": 6.9
+    },
+    {
+     "time": "2024-11-06T18:27:56.097000+00:00",
+     "humidity": 92.5,
+     "temperature": 7.1
+    },
+    {
+     "time": "2024-11-06T18:37:56.093000+00:00",
+     "humidity": 92.5,
+     "temperature": 7.0
+    },
+    {
+     "time": "2024-11-06T18:47:56.136000+00:00",
+     "humidity": 92.0,
+     "temperature": 7.0
+    },
+    {
+     "time": "2024-11-06T18:57:56.087000+00:00",
+     "humidity": 92.5,
+     "temperature": 7.0
+    }
+   ],
+   "h3": [
+    {
+     "time": "2024-11-05T03:00:00+00:00",
+     "humidity": 99.8,
+     "temperature": 0.89
+    },
+    {
+     "time": "2024-11-05T06:00:00+00:00",
+     "humidity": 100.0,
+     "temperature": 2.92
+    },
+    {
+     "time": "2024-11-05T09:00:00+00:00",
+     "humidity": 99.1,
+     "temperature": 6.02
+    },
+    {
+     "time": "2024-11-05T12:00:00+00:00",
+     "humidity": 97.6,
+     "temperature": 6.56
+    },
+    {
+     "time": "2024-11-05T15:00:00+00:00",
+     "humidity": 95.7,
+     "temperature": 7.02
+    },
+    {
+     "time": "2024-11-05T18:00:00+00:00",
+     "humidity": 97.7,
+     "temperature": 4.75
+    },
+    {
+     "time": "2024-11-05T21:00:00+00:00",
+     "humidity": 99.8,
+     "temperature": 2.79
+    },
+    {
+     "time": "2024-11-06T00:00:00+00:00",
+     "humidity": 100.0,
+     "temperature": 4.13
+    },
+    {
+     "time": "2024-11-06T03:00:00+00:00",
+     "humidity": 100.0,
+     "temperature": 5.14
+    },
+    {
+     "time": "2024-11-06T06:00:00+00:00",
+     "humidity": 99.2,
+     "temperature": 5.59
+    },
+    {
+     "time": "2024-11-06T09:00:00+00:00",
+     "humidity": 96.9,
+     "temperature": 6.51
+    },
+    {
+     "time": "2024-11-06T12:00:00+00:00",
+     "humidity": 94.9,
+     "temperature": 6.9
+    },
+    {
+     "time": "2024-11-06T15:00:00+00:00",
+     "humidity": 93.6,
+     "temperature": 6.91
+    },
+    {
+     "time": "2024-11-06T18:00:00+00:00",
+     "humidity": 92.6,
+     "temperature": 6.98
+    }
+   ],
+   "d1": [
+    {
+     "time": "2024-11-03T00:00:00+00:00",
+     "humidity": 95.6,
+     "temperature": 0.28
+    },
+    {
+     "time": "2024-11-04T00:00:00+00:00",
+     "humidity": 95.7,
+     "temperature": 0.39
+    },
+    {
+     "time": "2024-11-05T00:00:00+00:00",
+     "humidity": 98.6,
+     "temperature": 3.97
+    },
+    {
+     "time": "2024-11-06T00:00:00+00:00",
+     "humidity": 97.2,
+     "temperature": 5.92
+    }
+   ]
+  }
+ }
+}
