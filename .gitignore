@@ -1,5 +1,6 @@
 # Local files to ignore
-data/raw
+data/raw/*
+!data/raw/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
