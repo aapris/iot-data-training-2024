@@ -23,6 +23,43 @@ My year 2024 training codes.
    - Understand spatial patterns in sensor networks
    - Study environmental and urban microclimate effects
 
+## Setting up the environment
+
+### Virtual environment
+
+This project uses Python 3.12 and `uv` for dependency management. Follow these steps to set up your development environment:
+
+1. Install `uv` if you haven't already:
+```bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+1. Create a new virtual environment and install dependencies:
+```bash
+uv venv venv
+source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+uv pip install ".[dev,test]"
+```
+
+This will install:
+- All core dependencies for data analysis and visualization
+- Development tools (ruff, pre-commit, jupyter)
+- Testing frameworks (pytest with coverage)
+
+### Pre-commit hooks
+
+This project uses pre-commit hooks for linting and code quality checks.
+
+1. Install pre-commit (it is already installed in the virtual environment):
+```bash
+uv pip install pre-commit
+```
+
+1. Install the hooks to your local repository:
+```bash
+pre-commit install
+```
+
 ## Data sources
 
 ### IoT sensor data
@@ -42,7 +79,7 @@ Dashboards for above data:
 - https://en.ilmatieteenlaitos.fi/open-data-manual
 
 We gather the weather data and store it into InfluxDB v2
-from the FMI API using a custom 
+from the FMI API using a custom
 [fmiapi_v2.py](https://github.com/VekotinVerstas/DataManagementScripts/blob/master/FmiAPI/fmiapi_v2.py)
 script once in an hour.
 
@@ -62,7 +99,7 @@ Sample data files are available in the `datasamples` directory:
     - Daily aggregates
 - [fmi_observations_weather_multipointcoverage-hki-area-sample.csv](datasamples/fmi_observations_weather_multipointcoverage-hki-area-sample.csv): Weather observation data from FMI stations in Helsinki metropolitan area, including:
   - Air temperature
-  - Dew point temperature 
+  - Dew point temperature
   - Wind speed and direction
   - Gust speed
   - Relative humidity
@@ -71,7 +108,7 @@ Sample data files are available in the `datasamples` directory:
   - Cloud amount
   - Precipitation
   - Snow depth
-  
+
   Data is provided at 10-minute intervals for multiple weather station locations.
 - [r4c_latest.geojson](datasamples/r4c_latest.geojson) - Latest measurements from the R4C IoT sensor network and their metadata.
 - [r4c_sample.csv](datasamples/r4c_sample.csv) - Sample of the raw 10-minute data from the R4C IoT sensor network.
