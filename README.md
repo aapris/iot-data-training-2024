@@ -37,7 +37,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 1. Create a new virtual environment and install dependencies:
 ```bash
 uv venv venv
-source .venv/bin/activate  # On Windows use: .venv\Scripts\activate
+source venv/bin/activate  # On Windows use: venv\Scripts\activate
 uv pip install ".[dev,test]"
 ```
 
@@ -90,14 +90,14 @@ python fmiapi_v2.py --bbox 24.3,59.9,25.7,60.7 --duration 2h
 
 ### Sample data
 
-Sample data files are available in the `datasamples` directory:
-- [24E124136E140283.geojson](datasamples/24E124136E140283.geojson):Example IoT sensor data file containing:
+Sample data files are available in the `data/samples` directory:
+- [24E124136E140283.geojson](data/samples/24E124136E140283.geojson): Example IoT sensor data file containing:
   - Metadata
   - Temperature and humidity measurements at different resolutions:
     - Raw 10-minute data
     - 3-hour aggregates
     - Daily aggregates
-- [fmi_observations_weather_multipointcoverage-hki-area-sample.csv](datasamples/fmi_observations_weather_multipointcoverage-hki-area-sample.csv): Weather observation data from FMI stations in Helsinki metropolitan area, including:
+- [fmi_observations_weather_multipointcoverage-hki-area-sample.csv](data/samples/fmi_observations_weather_multipointcoverage-hki-area-sample.csv): Weather observation data from FMI stations in Helsinki metropolitan area, including:
   - Air temperature
   - Dew point temperature
   - Wind speed and direction
@@ -110,5 +110,13 @@ Sample data files are available in the `datasamples` directory:
   - Snow depth
 
   Data is provided at 10-minute intervals for multiple weather station locations.
-- [r4c_latest.geojson](datasamples/r4c_latest.geojson) - Latest measurements from the R4C IoT sensor network and their metadata.
-- [r4c_sample.csv](datasamples/r4c_sample.csv) - Sample of the raw 10-minute data from the R4C IoT sensor network.
+- [r4c_latest.geojson](data/samples/r4c_latest.geojson) - Latest measurements from the R4C IoT sensor network and their metadata.
+- [r4c_sample.csv](data/samples/r4c_sample.csv) - Sample of the raw 10-minute data from the R4C IoT sensor network.
+
+### Downloading data
+
+Switch to the `data` directory and run the wget command mentioned
+in the [README.md](data/README.md) file in that directory to download the data.
+
+After the data is downloaded, you can use the `merge_data.py` (TODO)
+script to merge the data into single geojson and parquet files.
