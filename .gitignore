@@ -3,6 +3,9 @@
 # Ignore contents of all data subdirs except samples
 # --> see data/*/.gitignore for details
 
+# PyCharm
+.idea
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
