@@ -29,12 +29,18 @@ My year 2024 training codes.
 
 This project uses Python 3.12 and `uv` for dependency management. Follow these steps to set up your development environment:
 
-1. Install `uv` if you haven't already:
+Install `uv` if you haven't already. You can use brew:
+
+```bash
+brew install uv
+```
+
+or download the install script:
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-1. Create a new virtual environment and install dependencies:
+Create a new virtual environment and install dependencies:
 ```bash
 uv venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
@@ -50,12 +56,7 @@ This will install:
 
 This project uses pre-commit hooks for linting and code quality checks.
 
-1. Install pre-commit (it is already installed in the virtual environment):
-```bash
-uv pip install pre-commit
-```
-
-1. Install the hooks to your local repository:
+Install the hooks to your local repository:
 ```bash
 pre-commit install
 ```
@@ -69,6 +70,9 @@ Milesight IoT sensors send the data using LoRaWAN. The data is stored in InfluxD
 Downloadable data:
 - https://bri3.fvh.io/opendata/r4c/
 - https://bri3.fvh.io/opendata/makelankatu/
+
+Consult [data/README.md](data/README.md) for more information on the data
+and how to download it.
 
 Dashboards for above data:
 - https://iot.fvh.fi/grafana/d/aduw70oqqdon4c/r4c-laajasalo-and-koivukyla?orgId=6&refresh=30m
