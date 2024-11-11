@@ -1,8 +1,7 @@
 # Local files to ignore
 
 # Ignore contents of all data subdirs except samples
-data/*/
-!data/samples/
+# --> see data/*/.gitignore for details
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
