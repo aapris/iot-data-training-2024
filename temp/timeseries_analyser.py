@@ -81,6 +81,12 @@ def read_data(data_files: list) -> pd.DataFrame:
     return df
 
 
+def visualize_daily_measurement_counts_per_sensor(df_resampled: pd.DataFrame) -> None:
+    fig, ax = plt.subplots(figsize=(20, 10))
+    sns.boxplot(data=df_resampled, ax=ax, orient="h")
+    plt.savefig("boxplots.png")
+
+
 def main():
     args = get_args()
     # Read parquet files from args.data into a DataFrame
@@ -117,6 +123,8 @@ def main():
     # Take math.log of all values
     # df_resampled = np.log(df_resampled)
 
+    visualize_daily_measurement_counts_per_sensor(df_resampled)
+
     max_val = df_resampled.max().max()
     mean_val = df_resampled.mean().mean()
     median_val = df_resampled.median().median()
@@ -131,7 +139,7 @@ def main():
     print(f"New max value: {max_val}")
 
     # df_resampled = df_resampled.apply(normalize_column, max_val=max_val)
-    print(list(df_resampled["144766"]))
+    # print(list(df_resampled["144766"]))
     df_resampled = df_resampled.apply(normalize_column)
     print(df_resampled)
     print(df_resampled.info())
