@@ -84,6 +84,14 @@ def read_data(data_files: list) -> pd.DataFrame:
 def visualize_daily_measurement_counts_per_sensor(df_resampled: pd.DataFrame) -> None:
     fig, ax = plt.subplots(figsize=(20, 10))
     sns.boxplot(data=df_resampled, ax=ax, orient="h")
+    ax.yaxis.tick_right()
+    ax.yaxis.set_label_position("right")
+    fontsize = 18
+    ax.set_xlabel("Number of daily measurements", fontsize=fontsize)
+    ax.set_ylabel("Sensor", fontsize=fontsize)
+    ax.set_title("Sensor reliability assessment: box plot of daily measurement counts", fontsize=fontsize)
+    ax.grid(axis="y", linestyle="--", linewidth=0.5, color="#cccccc")
+    plt.tight_layout()
     plt.savefig("boxplots.png")
 
 
