@@ -124,3 +124,14 @@ in the [README.md](data/README.md) file in that directory to download the data.
 
 After the data is downloaded, you can use the `merge_data.py` (TODO)
 script to merge the data into single geojson and parquet files.
+
+## Data analysis
+
+### Automated analysis
+Run `python exploration/create_sensor_analysis_reports.py` to generate
+data quality profiling and
+[exploratory data analysis](https://en.wikipedia.org/wiki/Exploratory_data_analysis)
+report for each sensor in the combined raw data Parquet via
+[YData Profiling](https://docs.profiling.ydata.ai/latest/features/time_series_datasets/) Python package.
+These reports are saved as HTML files under [`reports/`](./reports/) and they
+provide insights into the time-series characteristics of the data.
