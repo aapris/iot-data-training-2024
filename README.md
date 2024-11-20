@@ -125,6 +125,16 @@ in the [README.md](data/README.md) file in that directory to download the data.
 After the data is downloaded, you can use the `merge_data.py` (TODO)
 script to merge the data into single geojson and parquet files.
 
+## Combine raw data
+
+```bash
+python exploration/combine_raw_data.py \
+    --geojson-in $(ls data/raw/*.geojson) \
+    --geojson-out data/interim/metadata_all.geojson \
+    --parquet-in data/raw/makelankatu-2024.parquet data/raw/r4c_all-2024.parquet \
+    --parquet-out data/interim/data_all.parquet
+```
+
 ## Data analysis
 
 ### Automated analysis
