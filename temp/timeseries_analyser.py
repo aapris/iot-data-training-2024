@@ -82,8 +82,10 @@ def read_data(data_files: list) -> pd.DataFrame:
 
 
 def visualize_daily_measurement_counts_per_sensor(df_resampled: pd.DataFrame) -> None:
+    # TODO: Add more descriptive labels for sensors
+    order = df_resampled.mode().max().sort_values(ascending=False).index
     fig, ax = plt.subplots(figsize=(20, 10))
-    sns.boxplot(data=df_resampled, ax=ax, orient="h")
+    sns.boxplot(data=df_resampled, ax=ax, orient="h", order=order)
     ax.yaxis.tick_right()
     ax.yaxis.set_label_position("right")
     fontsize = 18
