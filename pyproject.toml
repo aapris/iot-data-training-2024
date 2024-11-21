@@ -89,4 +89,4 @@ addopts = "--cov=fvhdata --cov-report=term-missing"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
-packages = ["fvhdata"]
+packages = {find = {where = ["src"]}}
