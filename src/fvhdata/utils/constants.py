@@ -8,3 +8,4 @@ INTERIM = DATA.joinpath("interim")
 PROCESSED = DATA.joinpath("processed")
 
 REPORTS = REPOSITORY_ROOT.joinpath("reports")
+FIGURES = REPORTS.joinpath("figures")
