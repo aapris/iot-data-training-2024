@@ -44,7 +44,7 @@ Create a new virtual environment and install dependencies:
 ```bash
 uv venv venv
 source venv/bin/activate  # On Windows use: venv\Scripts\activate
-uv pip install ".[dev,test]"
+uv pip install -e ".[dev,test]"
 ```
 
 This will install:
