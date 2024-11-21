@@ -79,13 +79,13 @@ skip-magic-trailing-comma = false
 [tool.ruff.isort]
 combine-as-imports = true
 lines-after-imports = 2
-known-first-party = ["sensor_analysis"]
+known-first-party = ["fvhdata"]
 section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "--cov=sensor_analysis --cov-report=term-missing"
+addopts = "--cov=fvhdata --cov-report=term-missing"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
