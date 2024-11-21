@@ -10,6 +10,9 @@ df = pd.read_parquet(merged_parquet_path)
 # in the "sortby" parameter of ProfileReport.
 df = df.reset_index()
 
+out_dir = REPORTS.joinpath("ydata-profiling")
+out_dir.mkdir(parents=True, exist_ok=True)
+
 for i, sensor_name in enumerate(df["dev-id"].unique(), start=1):
     print(f"\nCreating sensor analysis report {i}/{df['dev-id'].nunique()}")
     sensor_data = df.loc[df["dev-id"] == sensor_name, df.columns.drop("dev-id")]
@@ -26,4 +29,4 @@ for i, sensor_name in enumerate(df["dev-id"].unique(), start=1):
     # Chronologically order the time-series via "sortby" parameter.
     profile = ProfileReport(sensor_data, tsmode=True, sortby="time", title=f"Time-series EDA of sensor {sensor_name}")
 
-    profile.to_file(REPORTS.joinpath(f"report_timeseries_{sensor_name}.html"))
+    profile.to_file(out_dir.joinpath(f"report_timeseries_{sensor_name}.html"))
