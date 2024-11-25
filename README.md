@@ -145,3 +145,9 @@ report for each sensor in the combined raw data Parquet via
 [YData Profiling](https://docs.profiling.ydata.ai/latest/features/time_series_datasets/) Python package.
 These reports are saved as HTML files under [`reports/`](./reports/) and they
 provide insights into the time-series characteristics of the data.
+
+### Streamlit app for interactive data visualizations
+
+```bash
+streamlit run exploration/streamlit_dashboard.py
+```

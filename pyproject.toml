@@ -25,6 +25,7 @@ dependencies = [
     "matplotlib>=3.7.0",
     "seaborn>=0.12.0",
     "plotly>=5.18.0",
+    "streamlit>=1.40.1",
 
     # Geospatial analysis
     "folium>=0.14.0",
